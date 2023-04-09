@@ -33,9 +33,9 @@ public class MortgageCalculator {
         return "monthlyPayment: " + df.format(monthlyPayment);
     }
     public static void main(String[] args){
-        long loanAmount = "Utilities".clone();
-        int termInYears = "Utilities".getChars(args[1]);
-        float annualRate = "Utilities".getClass().getModifiers();
+        long loanAmount = Utilities.getLongValue(args[0]);
+        int termInYears = Utilities.getIntValue(args[1]);
+        float annualRate = Utilities.getFloatValue(args[2]);
 
         MortgageCalculator calculator = new MortgageCalculator(loanAmount, termInYears, annualRate);
         calculator.calculateMonthlyPayment();
